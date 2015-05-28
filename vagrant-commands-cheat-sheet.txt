@@ -1,0 +1,11 @@
+Typing `vagrant` from the command line will display a list of all available commands.
+
+# Common Vagrant Commands
+vagrant up            starts vagrant environment (also provisions only on the FIRST vagrant up)
+vagrant status        outputs status of the vagrant machine
+vagrant global-status outputs status of all vagrant machines
+vagrant halt          stops the vagrant machine
+vagrant reload        restarts vagrant machine, loads new Vagrantfile configuration
+vagrant provision     forces reprovisioning of the vagrant machine
+vagrant ssh           connects to machine via SSH
+vagrant destroy       stops and deletes all traces of the vagrant machine
