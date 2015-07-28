@@ -17,6 +17,7 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant suspend`             -- Suspends a virtual machine (remembers state)
 - `vagrant resume`              -- Resume a suspended machine (vagrant up works just fine for this as well)
 - `vagrant reload --provision`  -- Restart the virtual machine and force provisioning
+- `vagrant provision --debug`   -- Use the debug flag to increase the verbosity of the output
 - `vagrant push`                -- Yes, vagrant can be configured to [deploy code](http://docs.vagrantup.com/v2/push/index.html)!
 - `vagrant up --provision | tee provision.log`  -- Runs `vagrant up`, forces provisioning and logs all output to a file
 
