@@ -10,6 +10,7 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant provision`   -- forces reprovisioning of the vagrant machine
 - `vagrant ssh`         -- connects to machine via SSH
 - `vagrant destroy`     -- stops and deletes all traces of the vagrant machine
+- `vagrant package`     -- packages a running virtualbox env in a reusable box
 
 # Tips
 - `vagrant -v`                    -- Get the vagrant version
