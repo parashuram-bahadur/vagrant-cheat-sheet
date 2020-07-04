@@ -1,0 +1,29 @@
+1. Get a basic Ubuntu image working. You should be able to boot it and vagrant ssh.
+
+2. Next, enable the VirtualBox display, which is off by default. Halt the VM and uncomment these lines in Vagrantfile:
+config.vm.provider :virtualbox do |vb|
+  vb.gui = true
+end
+
+3. Boot the VM and observe the new display window. Now you just need to install and start xfce4. Use vagrant ssh and:
+sudo apt-get install xfce4
+sudo startxfce4&
+
+If this is the first time you're running this Ubuntu environment, you'll need to run the following command before installing xfce4:
+sudo apt-get update
+That's it, you should be landed in a xfce4 session.
+
+Update: For a better experience, I recommend these improvements:
+
+Don't start the GUI as root. You really want to stay the vagrant user. To do this you need to permit anyone to start the GUI: sudo vim /etc/X11/Xwrapper.config and edit it to allowed_users=anybody.
+Next, install the VirtualBox guest tools before starting the GUI. This will give you a healthy screen resolution, integrated mouse, etc.
+$ sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+$ sudo VBoxClient-all
+Only now should you start the GUI as the vagrant user, with $ startxfce4&.
+Update 2: Tried this today and the VBoxClient-all script isn't always installed. If it's missing, you can replace with the equivalent:
+
+sudo VBoxClient --clipboard
+sudo VBoxClient --draganddrop
+sudo VBoxClient --display
+sudo VBoxClient --checkhostversion
+sudo VBoxClient --seamless
