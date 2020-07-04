@@ -39,7 +39,7 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant -v`                    -- get the vagrant version
 - `vagrant status`                -- outputs status of the vagrant machine
 - `vagrant global-status`         -- outputs status of all vagrant machines
-- `vagrant global-status --prune` -- same as above, but prunes invalid entries
+- `vagrant global-status --prune` -- same as above, but prunes invalid entries (https://www.vagrantup.com/docs/cli/global-status.html)
 - `vagrant provision --debug`     -- use the debug flag to increase the verbosity of the output
 - `vagrant push`                  -- yes, vagrant can be configured to [deploy code](http://docs.vagrantup.com/v2/push/index.html)!
 - `vagrant up --provision | tee provision.log`  -- Runs `vagrant up`, forces provisioning and logs all output to a file
